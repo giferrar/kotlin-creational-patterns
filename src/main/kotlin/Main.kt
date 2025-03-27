@@ -29,6 +29,10 @@ fun main() {
     AbstractFactoryExercise().playGame(GameFactory.GameType.MOUNTAIN, Difficulty.EASY)
     AbstractFactoryExercise().playGame(GameFactory.GameType.DESERT, Difficulty.HARD)
 
+    // Solution to Exercise 4
+    println("----- Solution to Exercise 4 -----")
+    // Problem: the default parameters values are displayed in console instead of the builder values, because the primary constructor is executed in the creation of the Builder class
+    Cat.Builder().name("Tom").weight(5).cuteLevel(50).dangerLevel(0).build()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {
