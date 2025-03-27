@@ -23,17 +23,22 @@ class Person(name: String, surname: String, age: Int = 18) {
     private var employed: Boolean = false
     private var retired: Boolean = false
 
+    init {
+        println("1) Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed")
+    }
+
     constructor(name: String, surname: String, age: Int, employed: Boolean) : this(name, surname, age) {
         this.employed = employed
+        println("3) Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed")
     }
 
     constructor(name: String, surname: String, age: Int, employed: Boolean, retired: Boolean) : this(name, surname, age, employed) {
         this.retired = retired
-        println("Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed and ${if (retired) "" else "not "}retired")
+        println("4) Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed and ${if (retired) "" else "not "}retired")
     }
 
     init {
-        println("Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed")
+        println("2) Person created with name $name $surname and age $age. $name is ${if (employed) "" else "not "}employed")
     }
 }
 
