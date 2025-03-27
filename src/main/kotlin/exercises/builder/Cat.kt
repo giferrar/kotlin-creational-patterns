@@ -35,6 +35,10 @@ class Cat private constructor(
     }
 
     init {
+        // This is an antipattern
+        check(name.isNotBlank()) { "A Cat must have a name" }
+        check(weight > 0) { "The Cat's weight cannot be zero or less" }
+        // If Cat constructor was a no parameters constructor, the check methods would be written inside the builder functions
         println("Cat created with name $name, weight $weight, cute level $cuteLevel and danger level $dangerLevel")
     }
 }

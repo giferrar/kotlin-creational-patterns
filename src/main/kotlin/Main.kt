@@ -33,6 +33,9 @@ fun main() {
     println("----- Solution to Exercise 4 -----")
     // Problem: the default parameters values are displayed in console instead of the builder values, because the primary constructor is executed in the creation of the Builder class
     Cat.Builder().name("Tom").weight(5).cuteLevel(50).dangerLevel(0).build()
+    // These throws an IllegalStateException!
+    // Cat.Builder().name("").weight(10000).cuteLevel(10).dangerLevel(10).build()
+    // Cat.Builder().name("Ghost").weight(0).cuteLevel(0).dangerLevel(100).build()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {
