@@ -2,6 +2,8 @@ package org.example
 
 import org.example.exercises.builder.Cat
 import org.example.exercises.factory.abstract.AbstractFactoryExercise
+import org.example.exercises.factory.abstract.Difficulty
+import org.example.exercises.factory.abstract.GameFactory
 import org.example.exercises.factory.method.FactoryMethodExercise
 import org.example.exercises.prototype.PrototypeExercise
 import org.example.exercises.singleton.SingletonExercise
@@ -24,7 +26,9 @@ fun main() {
 
     // Solution to Exercise 3
     println("----- Solution to Exercise 3 -----")
-    AbstractFactoryExercise().playGame()
+    AbstractFactoryExercise().playGame(GameFactory.GameType.MOUNTAIN, Difficulty.EASY)
+    AbstractFactoryExercise().playGame(GameFactory.GameType.DESERT, Difficulty.HARD)
+
 }
 
 class Person(name: String, surname: String, age: Int = 18) {

@@ -2,8 +2,8 @@ package org.example.exercises.factory.abstract
 
 class AbstractFactoryExercise {
 
-    fun playGame() {
-        val game = GameFactory.getFactory(GameFactory.GameType.MOUNTAIN).createGame(Difficulty.EASY)
+    fun playGame(gameType: GameFactory.GameType, difficulty: Difficulty) {
+        val game = GameFactory.getFactory(gameType).createGame(difficulty)
         game.play()
     }
 }

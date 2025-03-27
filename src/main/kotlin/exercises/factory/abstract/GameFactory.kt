@@ -3,7 +3,7 @@ package org.example.exercises.factory.abstract
 interface GameFactory {
 
     enum class GameType {
-        MOUNTAIN
+        MOUNTAIN, DESERT
     }
 
     fun createTerrain(): Terrain
@@ -14,6 +14,7 @@ interface GameFactory {
         fun getFactory(gameType: GameType): GameFactory {
             return when (gameType) {
                 GameType.MOUNTAIN -> MountainFactory()
+                GameType.DESERT -> DesertFactory()
             }
         }
     }
