@@ -21,6 +21,10 @@ fun main() {
     // Solution to Exercise 2
     println("----- Solution to Exercise 2 -----")
     FactoryMethodExercise().createTableOrder()
+
+    // Solution to Exercise 3
+    println("----- Solution to Exercise 3 -----")
+    AbstractFactoryExercise().playGame()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {
