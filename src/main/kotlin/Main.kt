@@ -11,11 +11,16 @@ import org.hamcrest.MatcherAssert.assertThat
 
 fun main() {
     // Solution to Exercise 1
+    println("----- Solution to Exercise 1 -----")
     Person("John", "Doe") // Please note how optional parameters help reduce method overloading
     Person("Bob", "Doe", 25)
     // Problem: according to the printed message, Moe is not employed, because the init block is part of the primary constructor and is executed before the secondary constructor
     Person("Moe", "Doe", 40, true)
     Person("Klaus", "Doe", 70, employed = false, retired = true)
+
+    // Solution to Exercise 2
+    println("----- Solution to Exercise 2 -----")
+    FactoryMethodExercise().createTableOrder()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {
