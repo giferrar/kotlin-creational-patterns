@@ -1,32 +1,36 @@
 package org.example.exercises.builder
 
-class Cat private constructor() {
-    var name: String = ""
-    var weight: Int = 0
-    var cuteLevel: Int = 100
-    var dangerLevel: Int? = null
+class Cat private constructor(
+    name: String = "",
+    weight: Int = 0,
+    cuteLevel: Int = 100,
+    dangerLevel: Int? = null
+) {
 
     class Builder {
-        private var cat = Cat()
+        private var name: String = ""
+        private var weight: Int = 0
+        private var cuteLevel: Int = 100
+        private var dangerLevel: Int? = null
 
         fun name(value: String): Builder {
-            cat.name = value
+            name = value
             return this
         }
         fun weight(value: Int): Builder {
-            cat.weight = value
+            weight = value
             return this
         }
         fun cuteLevel(value: Int): Builder {
-            cat.cuteLevel = value
+            cuteLevel = value
             return this
         }
         fun dangerLevel(value: Int?): Builder {
-            cat.dangerLevel = value
+            dangerLevel = value
             return this
         }
         fun build(): Cat {
-            return cat
+            return Cat(name, weight, cuteLevel, dangerLevel)
         }
     }
 
