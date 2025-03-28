@@ -14,12 +14,12 @@ class PrototypeExercise {
 
     private fun cloneCircle(circle: Circle): Circle {
         // Here we do some important operations
-        return Circle(circle.radius)
+        return circle.clone() as Circle
     }
 
     private fun cloneSquare(square: Square): Square {
         // Here we do some important operations
-        return Square(square.side)
+        return square.clone() as Square
     }
 
 }

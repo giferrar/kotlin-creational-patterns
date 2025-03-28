@@ -40,6 +40,10 @@ fun main() {
     // Solution to Exercise 5
     println("----- Solution to Exercise 5 -----")
     SingletonExercise().useCounter()
+
+    // Solution to Exercise 6
+    println("----- Solution to Exercise 6 -----")
+    PrototypeExercise().createClones()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {

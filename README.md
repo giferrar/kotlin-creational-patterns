@@ -422,7 +422,7 @@ data class Square(private val radius: Double = 0.0): Shape {
 ---
 #### 🧩 Exercise 6
 
-Modify the function `createClones` in the class [PrototypExercise](src/main/kotlin/exercises/prototype/PrototypeExercise.kt) to use the Prototype Pattern with data classes.
+Modify the function `createClones` in the class [PrototypeExercise](src/main/kotlin/exercises/prototype/PrototypeExercise.kt) to use the Prototype Pattern with data classes.
 For refactoring’s sake, we imply that the methods `cloneCircle` and `cloneSquare` perform the same operations.
 
 ---
