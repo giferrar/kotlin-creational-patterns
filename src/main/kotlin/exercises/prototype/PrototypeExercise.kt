@@ -13,13 +13,18 @@ class PrototypeExercise {
     }
 
     private fun cloneCircle(circle: Circle): Circle {
-        // Here we do some important operations
-        return circle.clone() as Circle
+        return cloneShape(circle) as Circle
     }
 
     private fun cloneSquare(square: Square): Square {
+        return cloneShape(square) as Square
+    }
+
+    // Merge the two functions in 3 steps.
+    // Step 1: extract the common code in a generic function
+    private fun cloneShape(shape: Shape): Shape {
         // Here we do some important operations
-        return square.clone() as Square
+        return shape.clone()
     }
 
 }
