@@ -36,6 +36,10 @@ fun main() {
     // These throws an IllegalStateException!
     // Cat.Builder().name("").weight(10000).cuteLevel(10).dangerLevel(10).build()
     // Cat.Builder().name("Ghost").weight(0).cuteLevel(0).dangerLevel(100).build()
+
+    // Solution to Exercise 5
+    println("----- Solution to Exercise 5 -----")
+    SingletonExercise().useCounter()
 }
 
 class Person(name: String, surname: String, age: Int = 18) {
